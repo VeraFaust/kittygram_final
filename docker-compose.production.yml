@@ -12,19 +12,19 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
   backend:
-    build: ./backend/
+    image: faustv/kittygram_backend
     env_file: .env.example
     volumes:
       - static:/backend_static
       - media:/app/media/
   frontend:
+    image: faustv/kittygram_frontend
     env_file: .env.example
-    build: ./frontend/
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static
   gateway:
-    build: ./nginx/
+    image: faustv/kittygram_nginx
     env_file: .env.example
     volumes:
       - static:/staticfiles/
