@@ -26,8 +26,8 @@ services:
   gateway:
     image: faustv/kittygram_nginx
     env_file: .env.example
+    ports:
+      - 9000:80
     volumes:
       - static:/staticfiles/
       - media:/app/media/
-    ports:
-      - 9000:80
