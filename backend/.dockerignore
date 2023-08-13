@@ -1,6 +1,7 @@
-venv
+.venv/
+venv 
 .git
+.git/
 db.sqlite3
-.idea
-.vscode
 .env
+.env/
