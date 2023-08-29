@@ -1,7 +1,7 @@
 ### Как запустить проект:
 
 # Клонировать репозиторий и перейти в него в командной строке:
-1) git clone git@github.com:FluttershyMLP/kittygram_final.git
+1) git clone git@github.com:VeraFaust/kittygram_final.git
 2) cd kittygram_final
 
 # Установить Docker Desktop. Убедиться, что он запущен:
@@ -32,5 +32,3 @@ sudo docker-compose -f путь_до_директории_проекта/docker-
 # Собираем статику: 
 sudo docker-compose -f путь_до_директории_проекта/docker-compose.production.yml exec backend python manage.py collectstatic
 sudo docker-compose -f путь_до_директории_проекта/docker-compose.production.yml exec backend cp -r /app/collected_static/. /static/collected_static/
-
-# GOTOVO!
