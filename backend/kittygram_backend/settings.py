@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = bool(os.getenv('DEBUG', 'False').lower())
 
-ALLOWED_HOSTS = os.getenv('cats.sytes.net', '127.0.0.1', 'localhost').split(',')
+ALLOWED_HOSTS = os.getenv('cats.sytes.net', default='127.0.0.1, localhost').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
