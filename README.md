@@ -9,7 +9,7 @@ Kittygram - это социальная сеть.
 
 ## В проекте реализовано следующее:
 - Настроен запуск проекта Kittygram в контейнерах;
-- Настроено автоматическое тестирование и деплой этого проекта на удалённый сервер.
+- Настроено автоматическое тестирование и деплой этого проекта на удалённый сервер.  
 Автоматизация настроена с помощью сервиса GitHub Actions.
 
 ## Технологии:
@@ -17,16 +17,17 @@ Kittygram - это социальная сеть.
 - Django;
 - Git;
 - Docker;
-- PostgreSql;
-- Pytest;
+- PostgreSQL;
+- Gunicorn;
+- Nginx;
 - React;
 - DRF;
-- 
+- Djoser.
 
 ## Запуск проекта:
 - Клонируйте репозиторий:
 ```
-git clone https://github.com/VeraFaust/hw05_final.git
+git clone https://github.com/VeraFaust/kittygram_final.git
 ```
 
 - Установите и активируйте виртуальное окружение:
@@ -57,13 +58,7 @@ py manage.py migrate
 ```
 py manage.py createsuperuser
 ```
-
-## Ссылки:
-- Сайт: http://veronikaf.pythonanywhere.com/
-- Админ-зона: http://veronikaf.pythonanywhere.com/admin
-
-## Автор
-Вера Фауст
+дописать
 
 ### Как запустить проект:
 
