@@ -53,24 +53,28 @@ py manage.py makemigrations
 ```
 py manage.py migrate
 ```
-
-- В папке с файлом manage.py создайте админа и запустите проект:
-```
-py manage.py createsuperuser
-```
-дописать
-
-### Как запустить проект:
-
-# Клонировать репозиторий и перейти в него в командной строке:
-1) git clone git@github.com:VeraFaust/kittygram_final.git
-2) cd kittygram_final
-
-# Установить Docker Desktop. Убедиться, что он запущен:
-На Linux: sudo systemctl status docker.
+тут
+## Запуск проекта через Docker:
+- Установить Docker Desktop. Убедиться, что он запущен:  
+На Linux: sudo systemctl status docker.  
 На Windows: должно быть открыто десктопное приложение.
+- В корне проекта выполнить команды:
+```
+docker-compose up
+```
 
-# Билдим образы: 
+```
+docker compose exec backend python manage.py migrate
+```
+
+```
+docker compose exec backend python manage.py createsuperuser
+```
+
+```
+docker compose exec backend python manage.py collectstatic
+```
+- Билдим образы: 
 cd frontend
 docker build -t ваш_никнейм/kittygram_frontend .
 cd ../backend
