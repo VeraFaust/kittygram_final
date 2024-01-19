@@ -1,3 +1,70 @@
+# Kittygram
+
+## Описание:
+Kittygram - это социальная сеть.  
+На сайте можно:
+- создавать учётную запись;
+- добавлять фотографии своих котиков и их краткую характеристику;
+- редактировать/удалять свои записи.
+
+## В проекте реализовано следующее:
+- Настроен запуск проекта Kittygram в контейнерах;
+- Настроено автоматическое тестирование и деплой этого проекта на удалённый сервер.
+Автоматизация настроена с помощью сервиса GitHub Actions.
+
+## Технологии:
+- Python;
+- Django;
+- Git;
+- Docker;
+- PostgreSql;
+- Pytest;
+- React;
+- DRF;
+- 
+
+## Запуск проекта:
+- Клонируйте репозиторий:
+```
+git clone https://github.com/VeraFaust/hw05_final.git
+```
+
+- Установите и активируйте виртуальное окружение:
+```
+python -m venv venv
+```
+```
+source venv/Scripts/activate
+```
+
+- Установите зависимости из файла requirements.txt:
+```
+py -m pip install --upgrade pip
+```
+```
+pip install -r requirements.txt
+```
+
+- В папке с файлом manage.py запустите миграции:
+```
+py manage.py makemigrations
+```
+```
+py manage.py migrate
+```
+
+- В папке с файлом manage.py создайте админа и запустите проект:
+```
+py manage.py createsuperuser
+```
+
+## Ссылки:
+- Сайт: http://veronikaf.pythonanywhere.com/
+- Админ-зона: http://veronikaf.pythonanywhere.com/admin
+
+## Автор
+Вера Фауст
+
 ### Как запустить проект:
 
 # Клонировать репозиторий и перейти в него в командной строке:
