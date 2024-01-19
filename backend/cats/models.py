@@ -16,11 +16,14 @@ class Cat(models.Model):
     color = models.CharField(max_length=16)
     birth_year = models.IntegerField()
     owner = models.ForeignKey(
-        User, related_name='cats',
+        User,
+        related_name='cats',
         on_delete=models.CASCADE
     )
-    achievements = models.ManyToManyField(Achievement,
-                                          through='AchievementCat')
+    achievements = models.ManyToManyField(
+        Achievement,
+        through='AchievementCat'
+    )
     image = models.ImageField(
         upload_to='cats/images/',
         null=True,
@@ -32,8 +35,14 @@ class Cat(models.Model):
 
 
 class AchievementCat(models.Model):
-    achievement = models.ForeignKey(Achievement, on_delete=models.CASCADE)
-    cat = models.ForeignKey(Cat, on_delete=models.CASCADE)
+    achievement = models.ForeignKey(
+        Achievement,
+        on_delete=models.CASCADE
+    )
+    cat = models.ForeignKey(
+        Cat,
+        on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return f'{self.achievement} {self.cat}'
